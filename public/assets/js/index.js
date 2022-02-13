@@ -37,10 +37,9 @@ const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify(animalObject)
+  body: JSON.stringify(note)
 })
   .then(response => {
     if (response.ok) {
@@ -54,12 +53,32 @@ const saveNote = (note) =>
   });
 
 const deleteNote = (id) =>
-  fetch(`/api/notes/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+fetch(`/api/notes/${id}`, {
+  method: 'DELETE',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(note)  
+// })
+// .then(response => {
+//   var arr = response;
+//   var idx = arr.indexof(`/api/notes/${id}`);
+
+//   if (idx !== -1) {
+//     arr.splice(idx, 1);
+//   }
+//   return arr;
+
+// })
+// .then (response => {
+//   fetch('/api/notes', {
+//     method: 'POST',
+//     headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: (response)
+
+});
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
