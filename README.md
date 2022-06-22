@@ -1,6 +1,6 @@
 # Handy Little Note Taker Starter Code
 
-An application that can be used to write and save notes.  The application will use an Express.js back end, and will save and retriee note data from a JSON file.
+An application that can be used to write and save notes.  The application will use an Express.js back end, and will save and retrieve note data from a JSON file.
 
 ## User Story
 
